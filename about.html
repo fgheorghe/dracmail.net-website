@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>dracMail - Webmail Interface </title>
+    <meta http-equiv="Content-Language" content="English"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="author" content="Grosan Flaviu Gheorghe"/>
+    <meta name="description" content="dracMail Webmail Interface"/>
+    <meta name="keywords" content="webmail, imap, extjs, php, freebsd"/>
+    <meta name="Robots" content="index,follow"/>
+    <meta name="revisit-after" content="1 day"/>
+    <meta name="Generator" content="gedit"/>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+</head>
+<body>
+<div id="header">
+    <div id="header_inner" class="fixed">
+        <div id="logo">
+            <h1><span>dracMail</span></h1>
+            <h2>Webmail Interface v0.1 release</h2>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="/" class="active" title="home">home</a></li>
+                <li><a href="/demo.html" title="try dracMail">try it</a></li>
+                <li><a href="/download.html" title="download dracMail">download</a></li>
+                <li><a href="/documentation.html" title="installation documentation">documentation</a></li>
+                <li><a href="/about.html" title="about dracMail">about</a></li>
+                <li><a href="/contribute.html" title="contribute">contribute</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div id="main" style="background: #414141; position: relative; top: 0px;">
+        <div class="content" style="padding-top: 2px;padding-left: 20px; padding-right: 5px;">
+            <h2>About dracMail</h2>
+            <div style="padding-left: 10px;">
+                <b>Contents</b>
+                <br/>
+                <br/>
+                <a href="#about">1. About</a>
+                <br/>
+                <a href="#requirements">2. Requirements</a>
+                <br/>
+                <a href="#development">3. Development tools</a>
+                <br/>
+                <a href="#features">4. Features</a>
+                <br/>
+                <a href="#planed">5. Planned features</a>
+                <br/>
+                <a href="#developers">6. Developers</a>
+                <br/>
+                <br/>
+                <div id="about"><b>1. About</b></div>
+                <div style="padding-left: 15px;">
+                    <br/>
+                    dracMail is a webmail interface built using PHP, <a href="http://www.sencha.com/ExtJS"
+                                                                        target="_blank">ExtJS</a> (JavaScript
+                    framework), MySQL and IMAP.
+                    <br/>
+                    The original purpose for this project was to learn more about ExtJS, however it turned out to be a
+                    reliable webmail interface.
+                </div>
+                <br/>
+                <br/>
+                <div id="requirements"><b>2. Requirements</b></div>
+                <div style="padding-left: 15px;">
+                    <br/>
+                    The minimum browser requirements are (ExtJS):
+                    <br/>
+                    <br/>
+                    <div style="padding-left: 20px;">
+                        - Internet Explorer 6+
+                        <br/>
+                        - FireFox 1.5+ (PC, Mac)
+                        <br/>
+                        - Safari 3+
+                        <br/>
+                        - Opera 9+ (PC, Mac)
+                    </div>
+                    <br/>
+                    The project's backend API has been developed using a FreeBSD server, but it should be compatible
+                    with any system capable of running <a
+                        href="http://dracmail.net/?page=documentation#before">these</a>.
+                </div>
+                <br/>
+                <br/>
+                <div id="development"><b>3. Development tools</b></div>
+                <div style="padding-left: 15px;">
+                    <br/>
+                    dracMail is entirely developed under FreeBSD, using KDE4 (sometimes GNOME) and the following tools:
+                    <div style="padding-left: 20px;">
+                        <br/>
+                        <a href="http://kate-editor.org/" target="_blank">Kate</a> - for writing the code itself
+                        <br/>
+                        <a href="http://projects.gnome.org/gedit/" target="_blank">gEdit</a> - the same reason as above
+                        <br/>
+                        <a href="http://subversion.apache.org/" target="_blank">Apache Subversion</a> - for keeping
+                        track of changes
+                    </div>
+                    <br/>
+                    The server tools consist of PHP, Apache and qmail which are listed <a
+                        href="http://dracmail.net/?page=documentation#before">here</a>.
+                </div>
+                <br/>
+                <br/>
+                <div id="features"><b>4. Features</b></div>
+                <div style="padding-left: 15px;">
+                    <br/>
+                    At the time this document is being written dracMail offers the most basic E-Mail functionality and a
+                    few extra features:
+                    <br/>
+                    <div style="padding-left: 20px;">
+                        <br/>
+                        - Rich User Interface
+                        <br/>
+                        - Built in WYSIWYG (using <a href="http://tinymce.moxiecode.com/" target="_blank">TinyMCE</a>)
+                        <br/>
+                        - HTML mail message
+                        <br/>
+                        - IMAP Folder listing
+                        <br/>
+                        - Folder content
+                        <br/>
+                        - Display message
+                        <br/>
+                        - Import existing messages
+                        <br/>
+                        - MySQL Caching
+                        <br/>
+                        - Message sorting
+                        <br/>
+                        - Moving and deleting messages
+                        <br/>
+                        - Message draft
+                        <br/>
+                        - Attachments
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <div id="planed"><b>5. Planned features</b></div>
+                <div style="padding-left: 15px;">
+                    <br/>
+                    The major functionality change for dracMail is the Plugin API, which will allow users to create
+                    their own 'applications'
+                    <br/>
+                    using ExtJS, PHP and MySQL. These should cover all the functionality, including the backend
+                    functionality, which is designed
+                    <br/>
+                    based on classes, and the UI functionality which is designed based on objects.
+                    <br/>
+                    <br/>
+                    Such 'applications' would for example be:
+                    <div style="padding-left: 20px;">
+                        <br/>
+                        - Notepad - allow the users to edit text files within the UI (now in beta stage)
+                        <br/>
+                        - Calendar - user friendly calendar application (now in beta stage)
+                        <br/>
+                        - Password change - although part of the most basic functionality, this process is different
+                        from server to server (now in beta stage)
+                        <br/>
+                        - XML News feeds - allow for XML news feeds from different websites (now in beta stage)
+                        <br/>
+                        - Theme changer - allow for pretty colors and such (work in progress)
+                        <br/>
+                        - Email encryption - allow the users to send and receive S/MIME encrypted messages
+                        <br/>
+                        - Twitter and Facebook integration - integrate the API for both of them
+                        <br/>
+                        - Antivirus integration - the webmail should allow for antivirus integration
+                        <br/>
+                        - Multi-language support - allow the user to choose different languages
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <div id="developers"><b>6. Developers</b></div>
+                <div style="padding-left: 15px;">
+                    <br/>
+                    dracMail Webmail is developed and maintaned by Grosan Flaviu Gheorghe ( fgheorghe [..at..]
+                    grosan.co.uk ).
+                    <br/>
+                    FreeBSD Port maintainer (<a href="http://www.freshports.org/mail/dracmail/." target="_blank">mail/dracmail</a>):
+                    <a href="http://www.bwelectronics.sk/jamrich" target="_blank">Mari&#225;n Jamrich</a>.
+                </div>
+            </div>
+            <br/>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="right">
+            &copy; Copyright 2010, dracMail.net - Design: <a href="http://www.opendesigns.org/" target="_blank">www.opendesigns.org</a>
+            and dracmail.net
+        </div>
+        <a href="http://validator.w3.org/check?uri=referer" title="Validate" target="_blank">XHTML</a> -
+        <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Validate" target="_blank">CSS</a>
+    </div>
+</div>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-44825595-1', 'dracmail.net');
+    ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

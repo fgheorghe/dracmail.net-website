@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>dracMail - Webmail Interface </title>
+    <meta http-equiv="Content-Language" content="English"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="author" content="Grosan Flaviu Gheorghe"/>
+    <meta name="description" content="dracMail Webmail Interface"/>
+    <meta name="keywords" content="webmail, imap, extjs, php, freebsd"/>
+    <meta name="Robots" content="index,follow"/>
+    <meta name="revisit-after" content="1 day"/>
+    <meta name="Generator" content="gedit"/>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+</head>
+<body>
+<div id="header">
+    <div id="header_inner" class="fixed">
+        <div id="logo">
+            <h1><span>dracMail</span></h1>
+            <h2>Webmail Interface v0.1 release</h2>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="/" class="active" title="home">home</a></li>
+                <li><a href="/demo.html" title="try dracMail">try it</a></li>
+                <li><a href="/download.html" title="download dracMail">download</a></li>
+                <li><a href="/documentation.html" title="installation documentation">documentation</a></li>
+                <li><a href="/about.html" title="about dracMail">about</a></li>
+                <li><a href="/contribute.html" title="contribute">contribute</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div id="main" style="background: #414141; position: relative; top: 0px;">
+        <div class="content" style="padding-top: 2px;padding-left: 20px; padding-right: 5px;">
+            <h2>Installation Documentation</h2>
+            <div style="padding-left: 10px;">
+                <b>Contents</b>
+                <br/>
+                <br/>
+                <a href="#notes">0. Notes</a>
+                <br/>
+                <a href="#before">1. Before installation</a>
+                <br/>
+                <a href="#download">2. Download dracMail</a>
+                <br/>
+                <a href="#prepare">3. Extract</a>
+                <br/>
+                <a href="#configure">4. Configure</a>
+                <br/>
+                <br/>
+                <div id="notes"><b>0. Notes</b></div>
+                <div style="padding-left: 15px;">
+                    <br/>
+                    This installation guide applies for release version 0.1.
+                    <br/>
+                    For the current beta version read the INSTALL file found in the archive.
+                </div>
+                <br/>
+                <br/>
+                <div id="before"><b>1. Before installation</b></div>
+                <div style="padding-left: 15px;">
+                    <br/>
+                    Before installing dracMail your server must have these packages installed:
+                    <div style="padding-left: 20px;">
+                        <br/>
+                        <a href="http://dev.mysql.com/downloads/mysql/5.5.html" target="_blank">MySQL >= 5.1</a>
+                        <br/>
+                        <a href="http://httpd.apache.org/download.cgi" target="_blank">Apache >= 2.2</a>
+                        <br/>
+                        <a href="http://php.net/downloads.php" target="_blank">PHP >= 5.3</a>
+                        <br/>
+                        Required PHP extensions:
+                        <div style="padding-left: 25px;">
+                            <a href="http://dk.php.net/manual/en/imap.installation.php" target="_blank">IMAP</a>
+                            <br/>
+                            <a href="http://dk.php.net/manual/en/mysql.installation.php" target="_blank">MySQL</a>
+                            <br/>
+                            <a href="http://dk.php.net/manual/en/dom.installation.php" target="_blank">DOM</a>
+                            <br/>
+                            <a href="http://dk.php.net/manual/en/tidy.installation.php" target="_blank">Tidy</a>
+                            <br/>
+                            <a href="http://dk.php.net/manual/en/mbstring.installation.php" target="_blank">Multibyte
+                                String</a>
+                            <br/>
+                            <a href="http://dk.php.net/manual/en/iconv.installation.php" target="_blank">iconv</a>
+                        </div>
+                    </div>
+                    <br/>
+                    <table class="notes" cellspacing="0" cellpadding="0" border="0" style="width: 915px;">
+                        <tr>
+                            <td style="padding-right: 5px; width: 20px;">
+                                NOTES:
+                            </td>
+                            <td>
+                                You should have an IMAP server up and running. If you decide installing your own, you
+                                could try <a href="http://freebsd.qmailrocks.org/" target="_blank">qmail</a>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-right: 5px;">
+                                &nbsp;
+                            </td>
+                            <td>
+                                dracMail has been developed and tested on FreeBSD, however it is compatible with any
+                                Linux distribution that supports the above packages.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-right: 5px;">
+                                &nbsp;
+                            </td>
+                            <td>
+                                PHP should be enabled as an Apache module.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br/>
+                <br/>
+                <div id="download"><b>2. Download dracMail</b></div>
+                <div style="padding-left: 15px;">
+                    <br/>
+                    You can manually download dracMail from sourceforce.net: <a
+                        href="http://sourceforge.net/projects/dracmail/files/beta/dracMail-0.1.2_release.tar.gz/download"
+                        target="_blank">http://sourceforge.net/projects/dracmail/files/beta/dracMail-0.1.2_release.tar.gz/download</a>,
+                    or using ftp:
+                    <div style="padding-left: 20px;">
+                        <br/>
+                        ftp http://sourceforge.net/projects/dracmail/files/beta/dracMail-0.1.2_release.tar.gz/download
+                    </div>
+                    <br/>
+                    Once downloaded, you should verify the md5 sum: MD5 (dracMail-0.1.2_release.tar.gz) =
+                    7bfc625c1fe7a4d81412593f02977ab3
+                </div>
+                <br/>
+                <br/>
+                <div id="prepare"><b>3. Extract</b></div>
+                <div style="padding-left: 15px;">
+                    <br/>
+                    Move or upload the file to your public_html folder, and extract:
+                    <div style="padding-left: 20px;">
+                        <br/>
+                        tar -zxvf dracMail-0.1_beta.tar.gz
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <div id="configure"><b>4. Configure</b></div>
+                <div style="padding-left: 15px;">
+                    <br/>
+                    After PHP, Apache and MySQL have been properly installed and configured, the last step is
+                    configuring dracMail itself.
+                    <br/>
+                    <br/>
+                    Prepare the MySQL Server:
+                    <div style="padding-left: 20px;">
+                        <br/>
+                        Login with the root user (or a user with CREATE permissions):
+                        <div style="padding-left: 25px;">
+                            <br/>
+                            mysql -u root -p
+                            <br/>
+                            <br/>
+                            Add a new user: CREATE USER 'WEBMAIL_USERNAME'@'localhost' IDENTIFIED BY 'PASSWORD';
+                            <br/>
+                            <br/>
+                            Create a new database: CREATE DATABASE WEBMAIL_DATABASE_NAME;
+                            <br/>
+                            <br/>
+                            Select the new database: USE 'WEBMAIL_DATABASE_NAME';
+                            <br/>
+                            <br/>
+                            Load the database tables from 'dracmail.sql', found in './api/SQL/': SOURCE
+                            ./api/SQL/dracmail.sql;
+                            <br/>
+                            <br/>
+                            Add SELECT, INSERT, DELETE and UPDATE permissions for the new user: GRANT SELECT, INSERT,
+                            UPDATE, DELETE ON
+                            <br/>WEBMAIL_DATABASE_NAME.* TO WEBMAIL_USERNAME@localhost;
+                            <br/>
+                            <br/>
+                            Flush privileges: FLUSH PRIVILEGES;
+                            <br/>
+                            <br/>
+                            Quit mysql: QUIT;
+                            <br/>
+                        </div>
+                        <br/>
+                    </div>
+                    <br/>
+                    <table class="notes" cellspacing="0" cellpadding="0" border="0" style="width: 915px;">
+                        <tr valign="top">
+                            <td style="padding-right: 5px; width: 20px;">
+                                NOTES:
+                            </td>
+                            <td>
+                                WEBMAIL_USERNAME, WEBMAIL_DATABASE_NAME and PASSWORD should be changed to your own.
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
+                    Change the current directory to the API directory:
+                    <div style="padding-left: 20px;">
+                        <br/>
+                        cd ./api/
+                    </div>
+                    <br/>
+                    Prepare the configuration file:
+                    <div style="padding-left: 20px;">
+                        <br/>
+                        cp configuration.php.sample configuration.php
+                    </div>
+                    <br/>
+                    Edit using your favourite editor, and change the following settings:
+                    <div style="padding-left: 20px;">
+                        <br/>
+                        IMAP Server configuration:
+                        <div style="padding-left: 25px;">
+                            <br/>
+                            define('IMAP_SERVER_HOST', "<b>localhost</b>"); // Your server hostname, default to
+                            'localhost'
+                            <br/>
+                            define('IMAP_SERVER_PORT', "<b>143</b>"); // Your server port, default to 143
+                            <br/>
+                        </div>
+                    </div>
+                    <div style="padding-left: 20px;">
+                        <br/>
+                        MySQL Server configuration:
+                        <div style="padding-left: 25px;">
+                            <br/>
+                            define('MYSQL_HOST', '<b>localhost</b>'); // Your MySQL server hostname, default to
+                            'localhost'
+                            <br/>
+                            define('MYSQL_USER', '<b>WEBMAIL_USERNAME</b>'); // Your webmail username
+                            <br/>
+                            define('MYSQL_PASS', '<b>PASSWORD</b>'); // Your webmail user password
+                            <br/>
+                            define('MYSQL_DB', '<b>WEBMAIL_DATABASE_NAME</b>'); // Database name, default to 'dracmail'
+                            <br/>
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+                    <table class="notes" cellspacing="0" cellpadding="0" border="0" style="width: 915px;">
+                        <tr valign="top">
+                            <td style="padding-right: 5px; width: 20px;">
+                                NOTES:
+                            </td>
+                            <td>
+                                First time login will create default user folders if they do not exist. To configure the
+                                process you can have a look at the $folderMapping variable in the configuration file.
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td style="padding-right: 5px;">
+                                &nbsp;
+                            </td>
+                            <td>
+                                Once the installation is done, be sure to remove the sample configuration file
+                                (api/configuration.php.sample).
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
+                    That's it. The installation is done.
+                    <br/>
+                </div>
+            </div>
+            <br/>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="right">
+            &copy; Copyright 2010, dracMail.net - Design: <a href="http://www.opendesigns.org/" target="_blank">www.opendesigns.org</a>
+            and dracmail.net
+        </div>
+        <a href="http://validator.w3.org/check?uri=referer" title="Validate" target="_blank">XHTML</a> -
+        <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Validate" target="_blank">CSS</a>
+    </div>
+</div>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-44825595-1', 'dracmail.net');
+    ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
